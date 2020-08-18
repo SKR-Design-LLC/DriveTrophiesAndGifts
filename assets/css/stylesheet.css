@@ -1,0 +1,343 @@
+/* Stylesheet */
+
+/* accessiblilty */
+.screen_reader_accessible {
+  background: white;
+  color: black;
+  display: none;
+  height: 0;
+  width:0;
+}
+
+#skiptocontent > a {
+  background-color: #B22222;
+  color: white;
+  height:1px;
+  left:-10000px;
+  overflow:hidden;
+  position:absolute;
+  top:auto;
+  width:1px;
+  z-index: 20;
+}
+
+#skiptocontent a:focus {
+  display: block;
+  height:auto;
+  left:0;
+  padding: .5rem 1rem;
+  position: relative;
+  width: 100vw;
+}
+
+#skiptocontent a:hover, #skiptocontent a:active {
+  color: #D6D6D6;
+}
+
+/* main area styles */
+body {
+  font-family: 'Arimo', 'Arial Black', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  background: #464545;
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: #0fc8ae;
+}
+
+a:hover, a:focus, a:active, a > img:hover, a > img:focus, a > img:active {
+  color:#caf302;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo Black', 'Arial Black', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.red {
+  color: maroon;
+}
+
+.ampersand_bold {
+  font-family: 'IBM Plex Sans', 'Arial Black', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 120%;
+}
+.ampersand_normal {
+  font-family: 'IBM Plex Sans', 'Arial Black', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 110%;
+}
+
+
+/* grid */
+header {grid-area: header;}
+article {grid-area: article;}
+section {grid-area: section;}
+aside {grid-area: aside;}
+footer {grid-area: footer;}
+
+.content_wrapper {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 3;
+  grid-row-gap: 2rem;
+  grid-template-areas:
+      "header header header"
+      "section section section"
+      "article article article"
+      "aside aside aside"
+      "footer footer footer";
+}
+
+/* haeder */
+header {
+  text-align: left;
+}
+
+header h4 {
+  margin-left: 2rem;
+}
+
+.img_logo {
+  padding: 2rem;
+  width: 100vw;
+}
+
+
+/* main */
+figure {
+  margin: 0 0 1rem 0;
+}
+
+figure img {
+  width: 100vw;
+}
+figcaption {
+  padding-top: .5rem;
+  font-style: italic;
+  font-size: 90%;
+}
+
+
+/* Slideshow Gallery */
+  /* Position the image container (needed to position the left and right arrows) */
+.gallery__container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.gallery__slides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  background-color: white;
+  color: grey;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left:0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* Number text (1/3 etc) */
+.gallery__number_text {
+  background-color: white;
+  color: grey;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: -20;
+}
+
+/* Container for image text */
+.gallery__caption_container {
+  background-color: white;
+  color: grey;
+  padding: 2px 16px;
+  text-align: center;
+
+}
+
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+/* Six columns side by side */
+/* .column {
+  float: left;
+  width: 16.66%;
+} */
+
+.gallery__grid {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* end gallery section */
+
+
+/* social icons */
+.social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.social img {
+  color: white;
+  width: 100px;
+}
+
+.social a:hover > img {
+  transform: scale(80%);
+}
+
+.social__istagram {
+  padding-right: 3rem;
+}
+
+article {
+  padding: 2rem;
+}
+
+/* footer */
+footer {
+  padding: 2rem;
+}
+
+#mc_embed_signup {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.mc-field-group {
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.indicates-required {
+  text-align: right;
+  font-size: 80%;
+  font-style: italic;
+}
+
+.mc-field-group label {
+  margin-top: .5rem;
+  display: block;
+}
+
+.mc-field-group input {
+  width: 100%;
+  height: 2rem;
+  border:0;
+  border-radius: 1px;
+}
+
+#mc-embedded-subscribe {
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 2;
+  border: 0;
+  background: #0fc8ae;
+  color: black;
+}
+
+#mc-embedded-subscribe:hover, #mc-embedded-subscribe:focus {
+  background:#caf302;
+}
+
+@media only screen and (min-width: 640px) {
+  #mc_embed_signup {
+    width: 35rem;
+  }
+  .mc-field-group, .mc-field-group input {
+    width: 30rem;
+  }
+
+  #mc-embedded-subscribe {
+    width: 30rem;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+  .img_logo {
+    width: 800px;
+  }
+}
