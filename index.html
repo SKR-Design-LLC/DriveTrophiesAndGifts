@@ -11,7 +11,7 @@
 
   <meta name="description" content="Drive Trophies and Gifts. Custom 3D Prints">
   <meta name="keywords" content="Drive, Tropies, Gifts, 3D Print, Custom 3D Printer Works, Custom Painted Trophies, Jeremy Bryson, Custom 3D Printed Gifts, Custom Mini Baskets, Custom Disc Golf Mini Baskets, Dice Trones Trophies, Custom Dice Trones Trophies, Board Game Trophies, Disc Golf Trophies">
-  <meta name="author" content="Sarah K. Russell of SKR Design LLC">
+  <meta name="author" content="Drive Trophies and Gifts">
 
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -151,7 +151,7 @@
 
   <footer>
     <p><a href="mailto:jeremy@drivetrophiesandgifts.com?subject=Inquiry%20From%20Drive%20Site">Contact Jeremy</a></p>
-    <p>&copy;2020, all rights reserved, Drive Trophies <span class="ampersand_normal">&amp;</span> Gifts.</p>
+    <p>&copy;<span id="year"></span>, all rights reserved, Drive Trophies <span class="ampersand_normal">&amp;</span> Gifts.</p>
     <a href="#main" class="top-button">Back to Top</a>
   </footer>
 
@@ -197,6 +197,12 @@
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
   }
+  </script>
+
+  <script>
+      var d = new Date();
+      var n = d.getFullYear();
+      document.getElementById("year").innerHTML = n;
   </script>
 </body>
 
